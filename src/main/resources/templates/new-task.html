@@ -10,6 +10,10 @@
     <h1 class="mb-4" th:text="${task.id != null ? 'Aufgabe bearbeiten' : 'Neue Aufgabe erstellen'}"></h1>
 
     <form th:action="@{${task.id} != null ? '/tasks/update/' + ${task.id} : '/tasks'}" th:object="${task}" method="post" class="needs-validation" novalidate>
+
+        <!-- Hidden field für die ID beim Bearbeiten -->
+        <input type="hidden" th:if="${task.id != null}" th:field="*{id}" />
+
         <div class="mb-3">
             <label for="title" class="form-label">Titel</label>
             <input type="text" id="title" name="title" th:field="*{title}" class="form-control" required>
