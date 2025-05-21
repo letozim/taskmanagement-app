@@ -26,26 +26,32 @@ Diese Java-basierte Webanwendung dient zur Organisation und Verwaltung von Aufga
 
 ## 📁 Projektstruktur
 
-- src/main/java – Anwendungslogik
-- Beinhaltet den gesamten Java-Code, aufgeteilt in verschiedene Schichten:
-- src/main/java/com/example/taskmanager/
--├── controller/     # Steuert die HTTP-Anfragen (HomeController, TaskController)
--├── model/          # Datenmodell (Task.java)
--├── repository/     # Schnittstelle zur Datenbank (z. B. TaskRepository)
--├── service/        # Geschäftslogik (TaskManagerApplication)
--src/main/resources – Konfigurationen
--Beinhaltet Konfigurationsdateien und Templates:
--src/main/resources/
--├── templates/
--│   ├── index.html
--│   └── new-task.html
--└── application.properties
--src/test – Tests
--pom.xml – Maven-Konfigurationsdatei
--Enthält Projektabhängigkeiten, Plugins und Build-Konfiguration.
--.gitignore – Git-Konfiguration
--Legt fest, welche Dateien nicht versioniert werden sollen.
--README.md – Projektdokumentation
+- **src/main/java** – Anwendungslogik  
+  Beinhaltet den gesamten Java-Code, aufgeteilt in verschiedene Schichten:  
+  `src/main/java/com/example/taskmanager/`  
+  ├── **controller/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Steuert die HTTP-Anfragen (z. B. HomeController, TaskController)  
+  ├── **model/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Datenmodell (z. B. Task.java)  
+  ├── **repository/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Schnittstelle zur Datenbank (z. B. TaskRepository)  
+  └── **service/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Geschäftslogik (z. B. TaskManagerApplication)  
+
+- **src/main/resources** – Konfigurationen  
+  Beinhaltet Konfigurationsdateien und Templates:  
+  `src/main/resources/`  
+  ├── **templates/**  
+  │   ├── index.html  
+  │   └── new-task.html  
+  └── **application.properties**  
+
+- **src/test** – Tests  
+
+- **pom.xml** – Maven-Konfigurationsdatei  
+  Enthält Projektabhängigkeiten, Plugins und Build-Konfiguration.  
+
+- **.gitignore** – Git-Konfiguration  
+  Legt fest, welche Dateien nicht versioniert werden sollen.  
+
+- **README.md** – Projektdokumentation  
+
 
 ## 📄 Dokumentation
 
