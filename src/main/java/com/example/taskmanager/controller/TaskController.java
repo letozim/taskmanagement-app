@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/tasks")
@@ -45,9 +46,16 @@ public class TaskController {
 
     @GetMapping("/edit/{id}")
     public String showEditForm(@PathVariable Long id, Model model) {
-        taskService.findById(id).ifPresent(task -> model.addAttribute("task", task));
-        return "new-task";
+        Optional<Task> taskOptional = taskService.findById(id);
+        if (taskOptional.isPresent()) {
+            model.addAttribute("task", taskOptional.get());
+            return "new-task";
+        } else {
+            // optional: Fehlerbehandlung
+            return "redirect:/tasks";
+        }
     }
+
 
     @PostMapping("/update/{id}")
     public String updateTask(@PathVariable Long id, @ModelAttribute Task task) {

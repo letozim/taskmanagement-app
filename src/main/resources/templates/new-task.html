@@ -9,24 +9,25 @@
 <div class="container py-4">
     <h1 class="mb-4" th:text="${task.id != null ? 'Aufgabe bearbeiten' : 'Neue Aufgabe erstellen'}"></h1>
 
-    <form th:action="@{${task.id} != null ? '/tasks/update/' + ${task.id} : '/tasks'}" th:object="${task}" method="post" class="needs-validation" novalidate>
+    <form th:action="${task.id != null} ? @{'/tasks/update/' + ${task.id}} : @{/tasks}"
+          th:object="${task}" method="post" class="needs-validation" novalidate>
 
         <!-- Hidden field für die ID beim Bearbeiten -->
         <input type="hidden" th:if="${task.id != null}" th:field="*{id}" />
 
         <div class="mb-3">
             <label for="title" class="form-label">Titel</label>
-            <input type="text" id="title" name="title" th:field="*{title}" class="form-control" required>
+            <input type="text" id="title" th:field="*{title}" class="form-control" required>
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Beschreibung</label>
-            <textarea id="description" name="description" th:field="*{description}" class="form-control"></textarea>
+            <textarea id="description" th:field="*{description}" class="form-control"></textarea>
         </div>
 
         <div class="mb-3">
             <label for="status" class="form-label">Status</label>
-            <select id="status" name="status" th:field="*{status}" class="form-select">
+            <select id="status" th:field="*{status}" class="form-select">
                 <option value="Offen">Offen</option>
                 <option value="In Bearbeitung">In Bearbeitung</option>
                 <option value="Erledigt">Erledigt</option>
@@ -35,7 +36,9 @@
 
         <div class="mb-3">
             <label for="dueDate" class="form-label">Fälligkeitsdatum</label>
-            <input type="date" id="dueDate" name="dueDate" th:field="*{dueDate}" class="form-control">
+            <input type="date" id="dueDate" name="dueDate"
+                   th:value="${#temporals.format(task.dueDate, 'yyyy-MM-dd')}"
+                   class="form-control">
         </div>
 
         <button type="submit" class="btn btn-success">Speichern</button>
