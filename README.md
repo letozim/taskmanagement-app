@@ -29,10 +29,10 @@ Diese Java-basierte Webanwendung dient zur Organisation und Verwaltung von Aufga
 - **src/main/java** – Anwendungslogik  
   Beinhaltet den gesamten Java-Code, aufgeteilt in verschiedene Schichten:  
   `src/main/java/com/example/taskmanager/`  
-  ├── **controller/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Steuert die HTTP-Anfragen (z. B. HomeController, TaskController)  
-  ├── **model/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Datenmodell (z. B. Task.java)  
-  ├── **repository/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Schnittstelle zur Datenbank (z. B. TaskRepository)  
-  └── **service/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Geschäftslogik (z. B. TaskManagerApplication)  
+  ├── **controller/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Steuert die HTTP-Anfragen (HomeController, TaskController)  
+  ├── **model/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Datenmodell (Task.java)  
+  ├── **repository/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Schnittstelle zur Datenbank (TaskRepository)  
+  └── **service/** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Geschäftslogik (TaskManagerApplication)  
 
 - **src/main/resources** – Konfigurationen  
   Beinhaltet Konfigurationsdateien und Templates:  
