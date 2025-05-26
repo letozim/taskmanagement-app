@@ -66,18 +66,11 @@ Das Projekt enthält:
  2. cd taskmanagement-app
 - Wechselt in den Ordner, in dem das Projekt gespeichert ist.
  3. git checkout main
-- Stellt sicher, dass du auf dem Hauptzweig (main) bist.
- 4. npm install
-- Installiert benötigte Node.js-Bibliotheken.
- 5. javac *.java
-- Kompiliert alle Java-Quellcode-Dateien im aktuellen Ordner.
- 6. java TaskManagerApplication.java
-- Startet die Java-Anwendung.
- 7. mvn clean install
+ 4. mvn clean install
 - Baut das Projekt mit Maven, kompiliert den Code und führt Tests aus.
- 8. mvn spring-boot:run
+ 5. mvn spring-boot:run
 - Startet die Anwendung mit Spring Boot.
- 9. Öffne im Browser die Adresse: http://localhost:8080/
+ 6. Öffne im Browser die Adresse: http://localhost:8080/
 - Zeigt die laufende Anwendung an.
 
 ## 📌 Hinweis
